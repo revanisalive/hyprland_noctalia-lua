@@ -22,7 +22,7 @@
         "position": "center",
         "screenshotAnnotationTool": "",
         "showCategories": false,
-        "showIconBackground": false,
+        "showIconBackground": true,
         "sortByMostUsed": false,
         "terminalCommand": "kitty -e",
         "viewMode": "list"
@@ -80,7 +80,7 @@
             "center": [
                 {
                     "characterCount": 5,
-                    "colorizeIcons": false,
+                    "colorizeIcons": true,
                     "emptyColor": "secondary",
                     "enableScrollWheel": true,
                     "focusedColor": "primary",
@@ -90,10 +90,10 @@
                     "hideUnoccupied": true,
                     "iconScale": 1,
                     "id": "Workspace",
-                    "labelMode": "index",
+                    "labelMode": "name",
                     "occupiedColor": "secondary",
                     "pillSize": 0.6,
-                    "showApplications": false,
+                    "showApplications": true,
                     "showApplicationsHover": false,
                     "showBadge": false,
                     "showLabelsOnlyWhenOccupied": true,
@@ -146,13 +146,6 @@
                     "iconColor": "primary",
                     "id": "Microphone",
                     "middleClickCommand": "pwvucontrol || pavucontrol",
-                    "textColor": "none"
-                },
-                {
-                    "applyToAllMonitors": false,
-                    "displayMode": "alwaysShow",
-                    "iconColor": "primary",
-                    "id": "Brightness",
                     "textColor": "none"
                 },
                 {
@@ -289,10 +282,10 @@
         "backgroundOpacity": 1,
         "colorizeIcons": false,
         "deadOpacity": 0.6,
-        "displayMode": "auto_hide",
+        "displayMode": "exclusive",
         "dockType": "floating",
         "enabled": false,
-        "floatingRatio": 1,
+        "floatingRatio": 0,
         "groupApps": false,
         "groupClickAction": "cycle",
         "groupContextMenuMode": "extended",
@@ -313,9 +306,9 @@
         "pinnedStatic": false,
         "position": "bottom",
         "showDockIndicator": false,
-        "showLauncherIcon": false,
+        "showLauncherIcon": true,
         "sitOnFrame": false,
-        "size": 1
+        "size": 0.5
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
@@ -617,7 +610,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/jake/Pictures/hyprpaper",
+        "directory": "/home/jake/Pictures/noctalia",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
@@ -638,10 +631,10 @@
         "skipStartupTransition": true,
         "solidColor": "#1a1a2e",
         "sortOrder": "name",
-        "transitionDuration": 1500,
-        "transitionEdgeSmoothness": 0.05,
+        "transitionDuration": 2500,
+        "transitionEdgeSmoothness": 0,
         "transitionType": [
-            "fade"
+            "disc"
         ],
         "useOriginalImages": false,
         "useSolidColor": false,
@@ -651,7 +644,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "halo 3",
+        "wallhavenQuery": "melina",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
