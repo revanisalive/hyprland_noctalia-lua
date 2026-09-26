@@ -1,5 +1,5 @@
 These is my personal config for hyprland.lua
-I try not to be too fancy and like my pc to be functional. Game mode (Super + N) turns off all animations. Super + U toggles window opacity.
+I try not to be too fancy and like my pc to be functional. Game mode (Super + N) turns off all animations/gaps/opacity. Super + U toggles just the window opacity (from 0.9 to 1.0)
 The default layout is scrolling with the window centered. Super + G toggles the layout between scrolling and dwindle.
 
 Scrolling Layout
