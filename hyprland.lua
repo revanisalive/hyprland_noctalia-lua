@@ -53,10 +53,10 @@ hl.config({
         },
         blur = {
             enabled = true,
-            size = 3,
+            size = 4,
             passes = 2,
             vibrancy = 0.1696,
-            popups = false,
+            popups = true,
         },
     },
     general = {
@@ -125,9 +125,9 @@ hl.animation({ leaf = "windowsOut",       enabled = true, speed = 1, spring = "f
 hl.animation({ leaf = "border",           enabled = true, speed = 1, spring = "slow" })
 hl.animation({ leaf = "borderangle",      enabled = false })
 -- Fade
-hl.animation({ leaf = "fade",             enabled = true, speed = 1, spring = "slow" })
+hl.animation({ leaf = "fade",             enabled = false })
 hl.animation({ leaf = "fadeOut",	      enabled = true, speed = 1, spring = "slow" })
-hl.animation({ leaf = "fadeIn", 	      enabled = true, speed = 1, spring = "slow" })
+hl.animation({ leaf = "fadeIn", 	      enabled = false })
 -- Zoom cursor
 hl.animation({ leaf = "zoomFactor",       enabled = true, speed = 6, spring = "fast" })
 -- Layer animations
