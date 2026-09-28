@@ -52,17 +52,23 @@ hl.config({
             enabled = false,
         },
         blur = {
+            variant = {
+                glass = {
+
+                }
+            },
             enabled = true,
             size = 4,
             passes = 2,
             vibrancy = 0.1696,
             popups = true,
+            new_optimizations = true,
         },
     },
     general = {
         gaps_in  = 5,
         gaps_out = 10,
-        border_size = 3,
+        border_size = 2,
         col = {
             active_border   = "rgba(83a4e7ff)",
             inactive_border = "rgba(1e1e2eff)",
@@ -71,7 +77,7 @@ hl.config({
         allow_tearing    = false,
 
 ---- LAYOUT ----
-        layout           = "scrolling",
+        layout           = "dwindle",
     },
     dwindle = {
         preserve_split = true,
@@ -220,7 +226,7 @@ hl.bind("CTRL" .. " + SHIFT +" .. "left",     hl.dsp.exec_cmd("playerctl previou
 hl.bind("CTRL" .. " + SHIFT +" .. "SPACE",    hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 
 --Change layout of current workspace
-hl.bind("SUPER + G", function ()
+hl.bind("SUPER + N", function ()
 local layouts   = { "scrolling", "dwindle" }
 local workspace = hl.get_active_workspace()
 if hl.get_active_special_workspace() then
@@ -245,7 +251,7 @@ if hl.get_active_special_workspace() then
                         end)
 
 --Game Mode/Toggle Animations
-hl.bind("SUPER + N", function ()
+hl.bind("SUPER + G", function ()
 local game_mode = (hl.get_config("animations.enabled") == false)
 if game_mode then
     hl.exec_cmd("hyprctl reload")
@@ -293,12 +299,37 @@ if current_opacity == 1.0 then
         end
         end)
 
+--Toggle Blur
+hl.bind("SUPER + Y", function ()
+local current_blur = hl.get_config("decoration.blur.enabled")
+
+if current_blur == true then
+    -- Turn off Blur
+    hl.config({
+        decoration = {
+            blur = {
+                enabled = false,
+                }
+            }
+        })
+    else
+    -- Turn on Blur
+    hl.config({
+        decoration = {
+            blur = {
+                enabled = true,
+                }
+            }
+        })
+        end
+        end)
+
 ---- WINDOW RULES ----
 hl.window_rule({ match = { class = "librewolf" },             opacity = "1 override", scrolling_width = 0.7})
 hl.window_rule({ match = { class = "gimp" },                  opacity = "1 override", scrolling_width = 1})
 hl.window_rule({ match = { class = "org.shotcut.Shotcut" },   opacity = "1 override", scrolling_width = 1})
 hl.window_rule({ match = { class = "com.obsproject.Studio" }, opacity = "1 override", scrolling_width = 1})
-hl.window_rule({ match = { class = "org.gnome.Loupe" },       opacity = "1 override"})
+hl.window_rule({ match = { class = "feh" },                   opacity = "1 override"})
 hl.window_rule({ match = { class = "org.kde.kalk" },          float = true})
 hl.window_rule({ match = { class = "desmume" },               opacity = "1 override"})
 --hl.window_rule({ match = { class = "kitty" },                 float = true, size = {1000, 600}})

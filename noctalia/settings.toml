@@ -1,0 +1,418 @@
+config_version = 14
+
+[bar]
+order = [ "default", "bar", "minimalbar" ]
+
+    [bar.bar]
+    background_opacity = 0.79999998211860657
+    center = [ "workspaces" ]
+    end = [ "input_volume", "volume", "notifications", "launcher", "control-center" ]
+    margin_ends = 300
+    padding = 30
+    radius = 10
+    scale = 1.2500000111758709
+    start = [ "clock", "date", "cpu", "temp", "ram" ]
+    widget_spacing = 32
+
+    [bar.default]
+    border = "secondary"
+    capsule = true
+    capsule_fill = "surface"
+    capsule_padding = 10.0
+    center = [ "workspaces" ]
+    enabled = false
+    end = [ "group:g4", "group:g2" ]
+    margin_ends = 0
+    padding = 30
+    radius = 0
+    radius_bottom_left = 40
+    radius_bottom_right = 40
+    scale = 1.2500000111758709
+    start = [ "group:g3", "group:g1" ]
+    widget_spacing = 32
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface"
+        id = "g1"
+        members = [ "cpu", "temp", "ram" ]
+        opacity = 1.0
+        padding = 10.0
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = ""
+        enabled = true
+        fill = "surface"
+        id = "g2"
+        members = [ "notifications", "launcher", "control-center" ]
+        opacity = 1.0
+        padding = 10.0
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = ""
+        enabled = true
+        fill = "surface"
+        id = "g3"
+        members = [ "clock", "date" ]
+        opacity = 1.0
+        padding = 10.0
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface"
+        id = "g4"
+        members = [ "input_volume", "volume" ]
+        opacity = 1.0
+        padding = 10.0
+
+    [bar.minimalbar]
+    background_opacity = 0.79999998211860657
+    center = [
+        "clock",
+        "cpu",
+        "temp",
+        "workspaces",
+        "input_volume",
+        "output_volume",
+        "notifications",
+        "launcher",
+        "control-center"
+    ]
+    enabled = false
+    end = []
+    margin_ends = 830
+    padding = 0
+    scale = 1.2500000111758709
+    start = []
+    widget_spacing = 32
+
+[brightness]
+enable_ddcutil = true
+
+[control_center]
+hidden_tabs = [ "bluetooth", "screen-time" ]
+
+    [control_center.calendar]
+    show_events_card = false
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+    [[control_center.shortcuts]]
+    type = "mic_mute"
+
+[desktop_widgets]
+enabled = false
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[dock]
+launcher_icon = "cat"
+launcher_position = "start"
+shadow = false
+
+[hot_corners.bottom_right]
+action = "window_switcher"
+
+[location]
+address = "Orange CIty, FL"
+
+[lockscreen]
+blur_intensity = 0.0
+fingerprint = false
+tint_intensity = 0.0
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@FALLBACK",
+    "lockscreen-login-box@DP-3",
+    "lockscreen-widget-0000000000000007",
+    "lockscreen-widget-0000000000000008"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-3"]
+    box_height = 82.0
+    box_width = 720.0
+    cx = 1280.0
+    cy = 1307.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-3".settings]
+        background_radius = 32.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 32.0
+        layout = "regular"
+        show_caps_lock = false
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = false
+        show_session_buttons = false
+        show_unlock_hint = false
+        show_weather = false
+
+    [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "FALLBACK"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000007]
+    box_height = 96.0
+    box_width = 160.0
+    cx = 848.0
+    cy = 1307.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "sticker"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000007.settings]
+        background = true
+        background_opacity = 0.0
+        background_radius = 0
+        image_path = "/home/jake/Pictures/archcatfetch.png"
+        opacity = 1.0
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000008]
+    box_height = 560.0
+    box_width = 736.0
+    cx = 1280.0
+    cy = 986.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000008.settings]
+        background_opacity = 0.0
+        bands = 32
+        centered = false
+        color_1 = "secondary"
+        color_2 = "secondary"
+        mirrored = true
+        reversed = false
+        show_when_idle = true
+
+[osd]
+position = "top_right"
+position_vertical = "top_right"
+
+    [osd.kinds]
+    bluetooth = false
+    brightness = false
+    caffeine = false
+    dnd = false
+    keyboard_backlight = false
+    keyboard_layout = false
+    lock_keys = false
+    media = false
+    nightlight = false
+    wifi = false
+
+[plugins]
+enabled = []
+
+[shell]
+app_icon_color = "secondary"
+clipboard_enabled = false
+font_family = "JetBrainsMono NF"
+polkit_agent = true
+settings_show_advanced = true
+show_location = false
+telemetry_enabled = true
+
+    [shell.launcher]
+    categories = false
+    compact = true
+    fetch_exchange_rates = false
+
+    [shell.panel]
+    clipboard_placement = "floating"
+    control_center_placement = "floating"
+    launcher_categories = false
+    open_near_click_control_center = true
+    transparency_mode = "soft"
+    wallpaper_placement = "floating"
+    wallpaper_position = "center"
+
+    [shell.screen_corners]
+    size = 100
+
+    [shell.screenshot]
+    confirm_region = true
+    copy_to_clipboard = false
+    directory = "/home/jake/Pictures/Screenshots"
+    show_cursor = true
+
+    [[shell.session.actions]]
+    action = "lock"
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "suspend"
+    enabled = false
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    enabled = true
+    shortcut = "5"
+    variant = "destructive"
+
+[theme]
+builtin = "Kanagawa"
+community_palette = "ADW"
+custom_palette = "bluemocha"
+shell_mode = "dark"
+source = "custom"
+wallpaper_scheme = "m3-fruit-salad"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "kcolorscheme", "qt" ]
+    community_ids = [ "gimp", "yazi" ]
+
+[wallpaper]
+directory = "/home/jake/Pictures/wallpapers"
+transition = [ "disc" ]
+transition_duration = 2000
+
+    [wallpaper.automation]
+    recursive = false
+
+    [wallpaper.default]
+    path = "/home/jake/Pictures/wallpapers/halo3.jpg"
+
+    [wallpaper.last]
+    path = "/home/jake/Pictures/wallpapers/halo3.jpg"
+
+    [wallpaper.monitors.DP-3]
+    path = "/home/jake/Pictures/wallpapers/halo3.jpg"
+
+[weather]
+auto_locate = true
+effects = false
+refresh_minutes = 60
+unit = "imperial"
+
+[widget.audio_visualizer]
+bands = 36
+centered = false
+high_color = "secondary"
+show_when_idle = true
+width = 201.0
+
+[widget.bongocat]
+script = "scripts/bongocat.lua"
+type = "scripted"
+
+[widget.clock]
+format = "{:%-I:%M %p}"
+
+[widget.control-center]
+glyph = "cat"
+
+[widget.cpu]
+display = "text"
+stat = "cpu_temp"
+visualization = "none"
+
+[widget.launcher]
+glyph = "rocket"
+
+[widget.media]
+art_size = 96.0
+max_length = 250
+min_length = 250
+title_scroll = "on_hover"
+
+[widget.ram]
+display = "text"
+visualization = "none"
+
+[widget.sysmon]
+show_value = true
+stat = "cpu_temp"
+visualization = "none"
+
+[widget.temp]
+display = "text"
+stat = "gpu_temp"
+visualization = "none"
+
+[widget.workspaces]
+change_color_on_hover = false
+empty_color = "outline"
+inactive_pill_size = 2.2000000000000002
+label_source = "name"
+max_label_chars = 10
